@@ -52,5 +52,5 @@ call plug#end()
 " HOTKEYS
 nnoremap <F5> :UndotreeToggle<CR>
 map <F1> :set invnumber<CR>
-map <F2> :set invnumber<CR>
+map <F2> :set invlist<CR>
 set pastetoggle=<F3>
