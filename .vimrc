@@ -38,17 +38,19 @@ set listchars=space:·
 " Показать скрытые сисволы (конец строки, начало строки, TAB, пробел и т.д)
 set list
 
-" set paste установим на F2
-set pastetoggle=<F2>
+" Корректная вставка текста в документ
+set paste
 
 " Секция для плагинов (Vim-plug)
 call plug#begin()
-
 Plug 'mbbill/undotree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
 call plug#end()
 
-" Открыть UndoTree
+
+" HOTKEYS
 nnoremap <F5> :UndotreeToggle<CR>
+map <F1> :set invnumber<CR>
+map <F2> :set invnumber<CR>
+set pastetoggle=<F3>
