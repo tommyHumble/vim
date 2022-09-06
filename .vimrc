@@ -41,6 +41,9 @@ set list
 " Корректная вставка текста в документ
 set paste
 
+" Backspace будет удалять символы в штатном режиме
+set backspace=indent,eol,start
+
 " Секция для плагинов (Vim-plug)
 call plug#begin()
 Plug 'mbbill/undotree'
