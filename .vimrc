@@ -1,5 +1,5 @@
 " Нумеруем строки
-set number
+" set number
 
 " Подсветка синтаксиса
 syntax on
@@ -9,6 +9,12 @@ set expandtab
 
 " Устанавливает количество пробелов в одном TAB
 set tabstop=4
+
+" TAB удаляется и добавляется по умному в начале строке (точнее до первого непробельного символа)
+set smarttab
+
+" Устанавливает количество пробелов для умного TAB в начале строки
+set shiftwidth=4
 
 " Отключить все звуки ошибок
 set noerrorbells
@@ -36,10 +42,7 @@ set undofile
 set listchars=space:·
 
 " Показать скрытые сисволы (конец строки, начало строки, TAB, пробел и т.д)
-set list
-
-" Корректная вставка текста в документ
-set paste
+" set list
 
 " Backspace будет удалять символы в штатном режиме
 set backspace=indent,eol,start
@@ -52,8 +55,19 @@ Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 
-" HOTKEYS
+"================================================
+" HOTKEYS =======================================
+"================================================
+" Ctrl + W + <arrow> - перемещение по undotree
+" Ctrl + T - подробная информация о времени изменений
+" Ctrl + D - скрыть/показать окошко diff
 nnoremap <F5> :UndotreeToggle<CR>
+
+" Пронумеровать строки
 map <F1> :set invnumber<CR>
+
+" Показать спец символы
 map <F2> :set invlist<CR>
+
+" Режим вставки (set paste)
 set pastetoggle=<F3>
